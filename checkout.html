@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Checkout - Ignis Brichete</title>
+    <link rel="icon" type="gif/x-icon" href="android-chrome-192x192.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Playwrite+CU:wght@100..400&family=Playwrite+HU:wght@100..400&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Ignis (1).png" alt="Logo Ignis" id="header-logo"></a>
+        </div>
+    </header>
+    <div class="cart-items-container">
+        <!-- Produsele din coș vor fi afișate aici -->
+    </div>
+</div>
+
+<!-- Butonul Plătește acum va fi ascuns până când sunt produse în coș -->
+<div id="payment-section" class="hidden">
+    <h3 id="total" style=" font-family: 'New Amsterdam',cursive; "></h3>
+ <button id="platesteBtn" style=" font-family: 'New Amsterdam',cursive;">Comandă acum</button>
+    
+ <!-- Fullscreen Form -->
+<div id="orderForm" class="hidden">
+    <div class="form-container">
+        <button id="closeFormBtn" class="close-btn">&times;</button>
+        <h2>Introduceți datele pentru comandă</h2>
+        <form id="checkoutForm" action="submit_order.php" method="POST">
+            <label for="name">Nume</label>
+            <input type="text" id="name" name="name" placeholder="Ex:Mihai" required>
+            
+            <label for="surname">Prenume</label>
+            <input type="text" id="surname" name="surname"  placeholder="Ex:Popescu" required>
+            
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" required pattern="^\d{10}$"  placeholder="Numarul de telefon" required >
+            
+            <label for="address" >Adresă</label>
+            <input type="text" id="address" name="address" placeholder="Scara, strada, bloc, etc.." required >
+            
+            <label for="county">Județ</label>
+            <select id="county" name="county" required>
+                <!-- Județele României -->
+                <option value="">Selectați județul</option>
+                <option value="Alba">Alba</option>
+                <option value="Arad">Arad</option>
+                <option value="Argeș">Argeș</option>
+                <option value="Bacău">Bacău</option>
+                <option value="Bihor">Bihor</option>
+                <option value="Bistrița-Năsăud">Bistrița-Năsăud</option>
+                <option value="Botoșani">Botoșani</option>
+                <option value="Brașov">Brașov</option>
+                <option value="Brăila">Brăila</option>
+                <option value="Buzău">Buzău</option>
+                <option value="Caraș-Severin">Caraș-Severin</option>
+                <option value="Călărași">Călărași</option>
+                <option value="Cluj">Cluj</option>
+                <option value="Constanța">Constanța</option>
+                <option value="Covasna">Covasna</option>
+                <option value="Dâmbovița">Dâmbovița</option>
+                <option value="Dolj">Dolj</option>
+                <option value="Galați">Galați</option>
+                <option value="Giurgiu">Giurgiu</option>
+                <option value="Gorj">Gorj</option>
+                <option value="Harghita">Harghita</option>
+                <option value="Hunedoara">Hunedoara</option>
+                <option value="Ialomița">Ialomița</option>
+                <option value="Iași">Iași</option>
+                <option value="Ilfov">Ilfov</option>
+                <option value="Maramureș">Maramureș</option>
+                <option value="Mehedinți">Mehedinți</option>
+                <option value="Mureș">Mureș</option>
+                <option value="Neamț">Neamț</option>
+                <option value="Olt">Olt</option>
+                <option value="Prahova">Prahova</option>
+                <option value="Sălaj">Sălaj</option>
+                <option value="Satu Mare">Satu Mare</option>
+                <option value="Sibiu">Sibiu</option>
+                <option value="Suceava">Suceava</option>
+                <option value="Teleorman">Teleorman</option>
+                <option value="Timiș">Timiș</option>
+                <option value="Tulcea">Tulcea</option>
+                <option value="Vaslui">Vaslui</option>
+                <option value="Vâlcea">Vâlcea</option>
+                <option value="Vrancea">Vrancea</option>
+            </select>
+
+            <label for="locality">Localitate</label>
+            <select id="locality" name="locality" required>
+                <option value="">Selectați localitatea</option>
+            </select>
+            <label for="additionalInfo">Informații suplimentare pentru comandă</label>
+            <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Introduceți informații suplimentare..."></textarea>
+            
+            <div class="cart-summary">
+                <h3>Detalii coș</h3>
+                <div id="cartItemsSummary"></div>
+                <hr>
+                <div class="totals">
+                    <p><strong>Subtotal:</strong> <span id="subtotal"></span> RON</p>
+                    <p><strong>Transport:</strong> <span id="shippingCost">20.00</span> RON</p> <!-- Presupunem că transportul este fix -->
+                    <hr>
+                    <p><strong>Total:</strong> <span id="totalOrder"></span> RON</p>
+                </div>
+            </div>
+
+            <button type="submit" id="submitOrder">Trimite Comanda</button>
+        </form>
+    </div>
+</div>
+<div id="confirmationMessage" class="hidden">
+    <h1>Comanda a fost trimisă. Ignis vă mulțumește!</h1>
+</div>
+
+
+ 
+ <script src="js3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>

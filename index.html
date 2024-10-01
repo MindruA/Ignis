@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ignis Brichete</title>
+    <link rel="icon" type="gif/x-icon" href="android-chrome-192x192.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Playwrite+CU:wght@100..400&family=Playwrite+HU:wght@100..400&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <!-- Meniul burger -->
+            <div class="burger-menu">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            </div>
+
+            <!-- Logo centrat -->
+            <div class="logo">
+                <img src="Ignis (1).png" alt="Logo Ignis" id="header-logo">
+            </div>
+
+            <div class="right-menu">
+              <div class="search-wrapper">
+                <button class="search-btn">
+                    <img src="bricheta.png" alt="Căutare" onclick="toggleSearch()">
+                </button>
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Bricheta Ideala &#x1F50D;">
+                </div>
+            </div>
+              <button class="cart" id="cart-container"><img src="cos.png" onclick="showCart()"></button>
+              
+              
+            </div>
+        </nav>
+
+        <!-- Meniul glisant -->
+        <div id="side-menu" class="side-menu">
+          <button class="close-btn" onclick="toggleMenu()">&times;</button>
+            <button class="contact"><a href="index2.html"> Contact</a></button>
+            <button class="faq">FAQ</button>
+        </div>
+    </header>
+    
+    <!--POZA-->
+    <div class="poza">
+      <img src="poza2.png">
+    </div>
+    
+    <!--SCRIS-->
+    <div class="moto">
+      <h1>Eleganță în fiecare flacără, stil în fiecare detaliu.</h1>
+    </div>
+    
+    <!--BRICHETELE-->
+    <div class="brichete">
+        <div class="brix">
+            <img src="b1.png" alt="Bricheta Hargiog">
+            <p>Bricheta Hargiog</p>
+            <h4 class="pret">49.99 Ron</h4>
+            <button class="acs">Adauga in cos</button>
+        </div>
+        <div class="brix">
+            <img src="b2.png" alt="Bricheta Leu">
+            <p>Bricheta Leu</p>
+            <h4 class="pret">45.00 Ron</h4>
+            <button class="acs">Adauga in cos</button>
+        </div>
+        <div class="brix">
+            <img src="b3.png" alt="Bricheta Zmeu">
+            <p>Bricheta Zmeu</p>
+            <h4 class="pret">29.99 Ron</h4>
+            <button class="acs">Adauga in cos</button>
+        </div>
+        <div class="brix">
+            <img src="b5.png" alt="Bricheta Zmeu">
+            <p>Bricheta Zmeu</p>
+            <h4 class="pret">49.99 Ron</h4>
+            <button class="acs">Adauga in cos</button>
+        </div>
+        <div class="brix">
+            <img src="b1.png" alt="Bricheta Zmeu">
+            <p>Bricheta Zmeu</p>
+            <h4 class="pret">59.99 Ron</h4>
+          
+            <button class="acs">Adauga in cos</button>
+        </div>
+        <div class="brix">
+            <img src="b1.png" alt="Bricheta Cangur">
+            <p>Bricheta Cangur</p>
+            <h4 class="pret">39.99 Ron</h4>
+            <button class="acs">Adauga in cos</button>
+        </div>
+        <div class="brix">
+          <img src="b1.png" alt="Bricheta Tigru">
+          <p>Bricheta Tigru</p>
+          <h4 class="pret">30.69 Ron</h4>
+          <button class="acs">Adauga in cos</button>
+      </div>
+      <div class="brix">
+          <img src="b5.png" alt="Bricheta Vidru">
+          <p>Bricheta Vidru</p>
+          <h4 class="pret">45.00 Ron</h4>
+          <button class="acs">Adauga in cos</button>
+      </div>
+      <div class="brix">
+        <img src="b1.png" alt="Bricheta Miau">
+        <p>Bricheta Miau</p>
+        <h4 class="pret">30.69 Ron</h4>
+        <button class="acs">Adauga in cos</button>
+    </div>
+    <div class="brix">
+      <img src="b2.png" alt="Bricheta Dragon">
+      <p>Bricheta Dragon</p>
+      <h4 class="pret">30.69 Ron</h4>
+      <button class="acs">Adauga in cos</button>
+  </div>
+  <div class="brix">
+    <img src="b3.png" alt="Bricheta Tigru">
+    <p>Bricheta Tigru</p>
+    <h4 class="pret">30.69 Ron</h4>
+    <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b2.png" alt="Bricheta leoi">
+  <p>Bricheta leoi</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b1.png" alt="Bricheta Tigru">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b2.png" alt="Bricheta Micus">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b3.png" alt="Bricheta Tigru">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b5.png" alt="Bricheta Tigru">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b1.png" alt="Bricheta Tigru">
+  <p>Bricheta tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b1.png" alt="Bricheta Tigru">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b1.png" alt="Bricheta Tigru">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b1.png" alt="Bricheta Tigru">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+<div class="brix">
+  <img src="b1.png" alt="Bricheta Tigru">
+  <p>Bricheta Tigru</p>
+  <h4 class="pret">30.69 Ron</h4>
+  <button class="acs">Adauga in cos</button>
+</div>
+
+    </div>
+
+
+
+
+<footer id="footer" >
+      <div class="Cont"> 
+        <div class="fb"><a href="https://www.facebook.com/alex.mindru.1/"><img src="facb.png"></a></div>
+        <div class="inst"><a href="https://www.instagram.com/_mindru_203/"><img src="instagram.png"></a></div>
+        <div class="tt"><a href="https://www.tiktok.com/@mindru.1" ><img src="TIK (2).png"></a></div>
+      </div>
+</footer>
+
+<div id="cart-window" class="cart-window">
+    <h2>Coșul tău</h2>
+    <div class="cart-items">
+        
+
+        <!-- Produsele vor fi adăugate aici -->
+    </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
